@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Page Vue</title>
+
+    <link rel="icon" type="image/x-icon" href="/img/icons/faviconexample2.png">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+
+
+
+
+
+</head>
+
+<body>
+    <!-- Page content -->
+    <div id="app">
+        <h1>{{titulo}}</h1>
+
+        <!-- Iteraciones for of-->
+        <ul>
+            <li v-for="fruta of frutas">{{fruta}}</li>
+        </ul>
+
+        <!-- Iteraciones en un array de objetos -->
+        <ul>
+            <li v-for="fruta of frutasObj">
+                <ul>
+                    <li> <strong> {{fruta.nombre}} </strong></li>
+                    <li> <em>Emoji:</em> {{fruta.emoji}} </li>
+                    <li> <em>Estado:</em> {{fruta.estado}} </li>
+                    <!-- Condicionales -->
+                    <span v-if="fruta.cantidad == 0"> <em style="color: red"> -- Agotado -- </em> </span>
+                    <li v-if="fruta.cantidad != 0"> <em>Cantidad:</em> {{fruta.cantidad}} </li>
+                </ul>
+            </li>
+            
+        </ul>
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- vue cdn GENERICO -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script> -->
+
+    <!-- versión de desarrollo, incluye advertencias de ayuda en la consola -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- versión de producción, optimizada para tamaño y velocidad -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+    <!-- javascript -->
+    <script src="js/01.js"></script>
+
+</body>
+
+</html>
